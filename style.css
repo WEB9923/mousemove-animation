@@ -1,0 +1,40 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    list-style-type:none;
+    text-decoration:none;
+}
+
+body{
+    background-color: #efefef;
+    overflow: hidden;
+}
+
+
+.element{
+    position: absolute;
+    background-color: transparent;
+    pointer-events: none;
+    border-radius: 50%;
+    transition: .3s;
+}
+.element:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #4c92c4;
+    transition: .3s;
+    animation: move 3s linear infinite;
+    pointer-events: none;
+}
+@keyframes move {
+    0%{
+        transform: translate(0);
+    }
+    100%{
+        transform: translate(300px);
+    }
+}
